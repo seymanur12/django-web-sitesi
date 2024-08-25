@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}BlogApp</title> 
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+body{
+    line-height: 1.5; 
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.conta{
+    width: calc(100% - 40px); /* Footer genişliği kadar */
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 20px; /* Sağ ve sol boşluk */
+    position: relative;
+    height: 380px; /* footer yüksekliği belirlendi */
+}
+.roww{
+    width: 100%; /* Row genişliği conta genişliği kadar */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Öğeleri sınırlarına doğru yay */
+}
+ul{
+    list-style:none;
+}
+.foot{
+    background-color: black;
+    padding: 70px 0;
+    width: calc(100% - 40px); /* Sağ ve sol boşlukların düzeltilmiş genişlik hesabı */
+    position: fixed;
+    bottom: 0;
+    left: 20px; /* Sol boşluk */
+    right: 20px; /* Sağ boşluk */
+    position: absolute;
+    transform: translateX(+1%) translateY(+300%);
+}
+.footer-col{
+    width: 33.33%; /* Sütunların eşit genişlikte olması için 3 sütun */
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 20px; /* Yazılar arası boşluk azaltıldı */
+    font-weight: 500; 
+    position: relative; 
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute; 
+    left:0; 
+    bottom: -10px; 
+    background-color: #e91e63;
+    height: 2px; 
+    box-sizing: border-box; 
+    width: 50px; 
+}
+.footer-col ul {
+    margin-top: 10px; /* Li öğeleri arası boşluk */
+}
+.footer-col ul li{
+    margin-bottom: 8px; /* Yazılar arası boşluk azaltıldı */
+}
+.footer-col ul li a{
+    font-size: 16px; 
+    text-transform: capitalize;
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: 300; 
+    color: #bbbbbb; 
+    display: block; 
+    transition: all 0.3s ease; 
+}
+.footer-col ul li a:hover{
+    color: #ffffff; 
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block; 
+    height: 40px; 
+    width: 40px; 
+    background-color: rgba(255,255,255,0.2); 
+    margin: 0 10px 10px 0 ; 
+    text-align: center; 
+    line-height: 40px; 
+    border-radius: 50%;
+    color: #ffffff; 
+    transition: all 0.5s ease; 
+}
+.footer-col .social-links a:hover{
+    color: #24262b; 
+    background-color:  #ffffff; 
+}
+@media(max-width: 767px){ /* Mobil cihazlar için */
+    .footer-col {
+        width: 50%; /* 2 sütun */
+        margin-bottom: 20px; /* Yazılar arası boşluk azaltıldı */
+    }
+}
+@media(max-width: 574px){ /* Daha küçük mobil cihazlar için */
+    .footer-col {
+        width: 100%; /* Tek sütun */
+    }
+}
+</style>
+</head>
+<body>
+    
+<footer class="foot">
+    <div class="conta">
+        <div class="roww">
+            <div class="footer-col">
+                <h4> company </h4>
+                <ul class="footer-col">
+                    <li>   <a href="#"> about us  </a></li>
+                    <li>   <a href="#"> our services </a></li>
+                    <li>   <a href="#"> privacy policy </a></li> <!-- "provacy" düzeltildi -->
+                    <li>   <a href="#"> affiliate program  </a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4> get help </h4>
+                <ul>
+                    <li>   <a href="#"> FAQ</a></li>
+                    <li>   <a href="#"> shippings </a></li>
+                    <li>   <a href="#"> returns </a></li>
+                    <li>   <a href="#"> payment options </a></li>
+                </ul>
+            </div>            
+            <div class="footer-col">
+                <h4> online shop </h4>
+                <ul>
+                    <li>   <a href="#"> watch</a></li>
+                    <li>   <a href="#"> bag</a></li>
+                    <li>   <a href="#"> shoes</a></li>
+                    <li>   <a href="#"> address</a></li> <!-- "adress" düzeltildi -->
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4> follow us </h4>
+                <div>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html><!--
+<div class="b">
+    <ul class="ücüncüul">
+    <li class="ss">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+    </li>
+    <li class="ss">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </li>
+    <li class="ss">    
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </li>
+</ul>
+-->

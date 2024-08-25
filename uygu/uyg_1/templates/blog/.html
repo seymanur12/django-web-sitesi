@@ -1,0 +1,24 @@
+
+{% block title %} {{ setting.title }} {% endblock %}
+<!-- setting.title  views.py a fonksiyonundaki :  model.py settingg veritabnindan geliyor -->
+
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+<h1> aaaaaaaa </h1>
+{% block sidebar %}
+        {% include 'sidebar.html' %}
+{% endblock %}
+<h1>  ikinci dahil edilen sayfa : </h1>
+{% block slider %}
+        {% include 'slider.html' %}
+{% endblock %}
+
+<h1>  üçüncü dahil edilen sayfa : </h1>
+{% block contentt %}
+        {% include 'content.html' %}
+{% endblock %}

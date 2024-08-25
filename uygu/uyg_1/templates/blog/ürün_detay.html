@@ -1,0 +1,107 @@
+<!--  ürünler sayfasindan seçilen ürün 
+tek olarak burda ayrınlıarıyla gözükçek -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Detayları</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+     
+     
+     
+    .navb{
+
+        transform: translateX(+25%) translateY(-146%);
+    }
+        .ana {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            transform: translateX(-110%) translateY(+2%);
+
+        }
+
+        .img {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .img img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .bilgiler {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .bilgiler h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .bilgiler p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .bilgiler a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .bilgiler a:hover {
+            color: #666;
+        }
+        /* id int  , isim str , ozellikler st , fiyat tl , gorsel ? */ 
+    </style>
+</head>
+<body> <div class="navb"> 
+    {% include 'partials/_navbar.html' %} </div> 
+    <div class="ana"> 
+
+    <div class="img"> 
+        
+        <img src="{{ ürün.gorsel.url }}" alt="{{ ürün.isim }}">
+    </div> 
+    
+    <div class="bilgiler"> 
+
+    <h1>{{ ürün.isim }}</h1>
+    <p>{{ ürün.özellikler }}</p>
+    <p>Fiyat: {{ ürün.fiyat }} TL</p>
+
+    
+
+    <a href="{% url 'urun_detay' ürün.id %}">
+        <h3> Yorumlar </h3>
+    </a>
+
+
+    </div> 
+</div> 
+
+
+</body>
+</html>
+{% include 'partials/footer.html' %} 

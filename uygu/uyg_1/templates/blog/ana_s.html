@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+{% block title %} {{ setting.title }} {% endblock %}
+<!-- setting.title  views.py a fonksiyonundaki :  model.py settingg veritabnindan geliyor -->
+
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+
+<style>
+/* Stil tanımını buraya taşıdım */
+p {
+    color: black;
+}
+.anasayfa{
+    position: fixed;
+    top: 200;
+    left: 0;
+    width: 100%;
+}
+.navvb{
+
+    transform: translateX(-3%) translateY(+76%);
+}
+
+</style>
+
+</head>
+
+<body>
+        <div class="navvb"> 
+            {% include 'partials/_navbar.html' %} </div> 
+
+
+<div class="anasayfa">
+    <p>
+    Şirketimiz, Türkiye'nin önde gelen platformlarından biridir. 2010 yılında kurulan , geniş ürün yelpazesi ve kullanıcı dostu alışveriş deneyimi ile milyonlarca kullanıcıya hizmet vermektedir.
+</p>
+</div>
+
+</body>
+</html>
+{% include 'partials/footer.html' %} 

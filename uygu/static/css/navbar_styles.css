@@ -1,0 +1,70 @@
+/* Navbar stilini genel olarak tanımla */
+.navbar {
+    background-color: #343a40; /* Koyu gri tonu */
+}
+
+/* Navbar marka metni (ANA SAYFA) */
+.navbar-brand {
+    color: #fff; /* Beyaz renk */
+    font-weight: bold; /* Kalın font */
+}
+
+/* Navbar linkleri */
+.navbar-nav .nav-link {
+    color: #fff; /* Beyaz renk */
+}
+
+/* Aktif linkler */
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: bold; /* Kalın font */
+}
+
+/* Navbar linklerinin hover efekti */
+.navbar-nav .nav-link:hover {
+    color: #ccc; /* Gri tonu */
+}
+
+/* Navbar linklerinin alt çizgisi */
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff; /* Beyaz renk */
+    transition: width 0.3s; /* Geçiş efekti */
+}
+
+/* Navbar linklerinin hover durumunda alt çizgi genişliği */
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* İlk satırın stilini tanımla */
+.navbar .container:first-child {
+    height: 40%;
+}
+
+/* İkinci satırın stilini tanımla */
+.navbar .container:nth-child(2) {
+    height: 30%;
+}
+
+/* İkinci satırın sol kısmı (ikonlar) */
+.navbar .container:nth-child(2) .navbar-nav {
+    flex-direction: row; /* İkonlar yatay sıralı */
+    justify-content: flex-start; /* Sol kenara hizala */
+    align-items: center; /* Dikeyde ortala */
+}
+
+/* İkinci satırın orta kısmı (metin) */
+.navbar .container:nth-child(2) .navbar-brand {
+    margin-right: auto; /* Metni sağa hizala */
+    margin-left: auto; /* Metni sola hizala */
+}
+
+/* İkinci satırın sağ kısmı (arama kutusu) */
+.navbar .container:nth-child(2) .navbar-nav:last-child {
+    flex-direction: row-reverse; /* İkonları sağdan sola sırala */
+    justify-content: flex-end; /* Sağ kenara hizala */
+    align-items: center; /* Dikeyde ortala */
+}

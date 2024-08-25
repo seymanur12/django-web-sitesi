@@ -1,0 +1,36 @@
+{% load static %}
+ 
+ <div class="card mb-3">
+             <!-- -->
+ <div class="row">
+<div class="col-md-3"> 
+
+  <!-- views.py  ve  urls.py -->
+  <img src="{% static 'img/'|add:blog.image  %}" alt="" class="img-fluid" >
+
+  <!-- ressim küçük olur--></div>
+
+<div class="col-md-9">
+  <div class="card-body"> 
+
+
+
+  <h5 class="card-title">
+  <!--
+  blog.id 
+  blog.title   ve   blog.description  bilgilerini aldik -->
+  <a href="{%  url 'blog_details'  blog.id %}  ">
+    
+  {{ blog.title }}
+</a></h5>
+
+  <p class="card-text"> {{ blog.description }}</p> 
+
+
+
+ </div> 
+ 
+ </div>
+ </div>
+
+</div>

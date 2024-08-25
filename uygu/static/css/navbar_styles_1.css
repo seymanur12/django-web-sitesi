@@ -1,0 +1,76 @@
+#chk1 {
+    display: none; 
+}
+
+i { 
+    color: #229561; 
+    cursor: pointer; 
+}
+
+.logo {
+    flex: 1; 
+    color: #a04b4b; 
+    margin-left: 50px; 
+    text-transform: uppercase; 
+}
+
+.search-box {
+    flex: 1; 
+    display: flex; /*
+    ---------- Flexbox modeli */
+    justify-content: center; /*----------- Yatayda ortala */
+    position: relative;
+}
+
+.search-box input {
+    width: 200px; /* Genişlik ayarı */
+    height: 40px;
+    border: none; 
+    outline: none; 
+    background: #360909; 
+    border-radius: 30px; 
+    color: gray; 
+    font-size: 16px; 
+    text-align: center; 
+}
+
+.search-box button {
+    cursor: pointer; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 30px;
+    border: none; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    transform: scale(0.9); 
+    background: green;
+}
+
+ul {
+    flex: 2; 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul li {
+    list-style: none; 
+}
+
+ul li a {
+    text-decoration: none; 
+    color: #791515; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    padding: 10px 15px;
+}
+
+ul li a:hover {
+    border-bottom: 2px solid cadetblue; 
+}
+
+.menu {
+    font-size: 2.5em; 
+    display: none; 
+}
+

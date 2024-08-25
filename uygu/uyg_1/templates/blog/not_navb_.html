@@ -1,0 +1,26 @@
+{% load static %}
+<!-- statik dosyalarını kullanabilmeniz için gerekli olan static etiketini yükler. -->
+{% block css_files %}  {% endblock %}
+<!--CSS dosyalarını içerecek olan bir Django şablon bloğu. -->
+<title>  {% block title %}    {% endblock %}  ğ </title> 
+<link  rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} " >
+</head>
+<body>
+<!-- -->
+<h1> ürünler sayfasi </h1>
+{% include 'partials/_navbar.html' %}  <!-- NAVBAR.HTML DAHİL ETTİK -->
+<!--_navbar.html adlı bir kısmi şablonu dahil eder. Bu genellikle bir gezinti çubuğunu içerir. -->
+
+{% block content %}  {% endblock %}
+<!--  Ana içeriği içerecek olan bir Django şablon bloğu.-->
+
+<script src="{% static 'js/bootstrap.min.js' %}">  </script>
+<!-- Bootstrap JavaScript dosyasının bağlantısını sağlar. -->
+
+
+{% block js_files %}   {% endblock %}
+<!-- JavaScript dosyalarını içerecek olan bir Django şablon bloğu. -->
+
+
+</body>
+</html>

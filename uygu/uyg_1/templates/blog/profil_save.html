@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    {% include 'partials/2_navbar.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profil_1.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .profile {
+        background-color: blue;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .profile img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .profile h1 {
+        margin-bottom: 10px;
+    }
+    
+    .tabs {
+        margin-top: 20px;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    li {
+        margin-right: 10px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #333;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+    }
+    
+    a:hover {
+        background-color: #ddd;
+    }
+    
+    .tab-content {
+        display: none;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tab-content.active {
+        display: block;
+    }
+    
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h1>John Doe</h1>
+            <button>Edit Profile</button>
+        </div>
+        <div class="tabs">
+            <ul>
+                <li><a href="{% url 'profil_12' %}">Posts</a></li>
+
+                <li class="active"><a href="{% url 'profil_save' %}">Saved</a></li>
+                <li><a href="{% url 'profil_like' %}">Liked</a></li>
+                <li><a href="#following">Following</a></li>
+                <li><a href="#followers">Followers</a></li>
+            </ul>
+            <div id="saved" class="tab-content active">
+                <h2>Saved Content</h2>
+                <!-- Saved content here -->
+            </div>
+            <div id="liked" class="tab-content">
+                <h2>Liked Content</h2>
+                <!-- Liked content here -->
+            </div>
+            <div id="following" class="tab-content">
+                <h2>Following Users</h2>
+                <!-- Following users here -->
+            </div>
+            <div id="followers" class="tab-content">
+                <h2>Followers</h2>
+                <!-- Followers here -->
+            </div>
+            <div id="posts" class="tab-content">
+                <h2>My Posts</h2>
+                <!-- User's posts here -->
+            </div>
+        </div>
+    </div>
+    <h1> Kayit ettiğim Postlar </h1>
+
+
+
+
+
+</body>
+</html>

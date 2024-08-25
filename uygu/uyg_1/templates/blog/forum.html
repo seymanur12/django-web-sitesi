@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block css_files %}  {% endblock %}
+
+    <title>  {% block title %}    {% endblock %}  ğ </title> 
+<link  rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} " >
+
+
+
+<style>
+.navvvb{
+
+    transform: translateX(-3%) translateY(+76%);
+}
+</style>
+
+</head>
+<body>
+
+    <div class="navvvb"> 
+        {% include 'partials/_navbar.html' %} </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<h1> forum sayfasi </h1>
+
+
+
+
+
+{% block content %}  {% endblock %}
+<!-- -->
+<script src="{% static 'js/bootstrap.min.js' %}">  </script>
+{% block js_files %}   {% endblock %}
+</body>
+</html>
+

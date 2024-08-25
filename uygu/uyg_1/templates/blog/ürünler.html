@@ -1,0 +1,136 @@
+{% load static %}
+{% include 'partials/_navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css_files %}  {% endblock %}
+    <title>{% block title %}{% endblock %}</title> 
+
+    {% block css_filess %}
+    <style>
+        .container {
+            height: 800px; /* Uzunluk ayarı, istediğiniz değere göre değiştirin */
+           
+          
+            background-color: #f0f0f0; /* Arka plan rengi, isteğinize göre değiştirin */
+      
+            margin-right: 80px; /* Sağ kenar boşluğu */
+            margin-left: 80px; /* Sol kenar boşluğu */
+            /* margin-bottom: 80px; /* Alt kenar boşluğu margin-top: 80px; /* Üst kenar boşluğu  */ 
+       
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .col-md-6 {
+            width: calc(33.33% - 20px);  /* genişlik,  genişlikten çıkan değer*/
+            width: 300px;
+            height: 400px;
+            border: 2px solid black;
+            border-radius: 0;
+            margin-bottom: 20px;
+            margin-top: 10px; /* Üst kenara 10 piksel boşluk */
+            margin-right: 20px; /* Sağ kenara 20 piksel boşluk */
+            margin-bottom: 30px; /* Alt kenara 30 piksel boşluk */
+            margin-left: 40px;
+        }  /* containter . row . col-md-6   urun */
+        .urun {
+            background-color: #e2e2e2; /* Mavi arka plan */
+            border: 1px solid #2980b9; /* Kenarlık */
+            padding: 15px; /* İç boşluk */
+            color: #000; /* Siyah renk */
+            text-align: center; 
+            width: 300px;
+            height: 400px;
+
+        }
+        .urun a {
+            text-decoration: none; /* Link altı çizgisi kaldırma */
+            color: #fff; /* Beyaz renk */
+            width: 300px;
+            height: 700px;
+
+
+        }
+        .urun img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            width: 300px; /* Genişlik */
+            height: 200px; /* Yükseklik */
+            border: 1px solid #2980b9; /* Kenarlık */
+
+        }
+        @media (max-width: 992px) {
+            .col-md-6 {
+                width: calc(50% - 20px); 
+            }
+        }
+        @media (max-width: 768px) {
+            .col-md-6 {
+                width: calc(100% - 20px); 
+            }
+        }  /* containter . row . col-md-6   urun */
+        h3{
+            color: #000; /* Siyah renk */
+            margin-bottom: 5px; 
+        }
+        p{
+            color: #000; /* Siyah renk */
+            margin-bottom: 10px;
+        }
+        a{
+            color: #000; /* Siyah renk */
+        }
+    </style>
+    {% endblock %}
+    
+</head>
+<body>
+
+    {% if context %}
+    <h2>Veriler Alındı:</h2>
+    <ul>
+    {% for item in context %}
+        <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Veriler alınamadı!</p>
+{% endif %}
+
+<h1>Ürünler Sayfası</h1>
+<div class="container">
+    <div class="row">
+
+        {% if urunler %}
+        {% for ürün in urunler %}
+        <div class="col-md-6">
+            <div class="urun">
+                <a href="{% url 'urun_detay' ürün.id %}">
+
+
+                    <img src="{{ ürün.gorsel.url }}" alt="{{ ürün.isim }}">
+                    <h3>{{ ürün.isim }}</h3>
+                    <p>{{ ürün.ozellikler }}</p>
+                    <p>Fiyat: {{ ürün.fiyat }} TL</p>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+    {% else %}
+    <p>Veriler alınamadı!</p>
+    {% endif %}
+    </div>
+</div>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block content %}{% endblock %}
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block js_files %}{% endblock %}
+</body>
+</html>
+{% include 'partials/footer.html' %} 

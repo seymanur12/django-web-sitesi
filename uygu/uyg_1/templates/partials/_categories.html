@@ -1,0 +1,14 @@
+<!-- for in ne geleceği   in nerden geleceği   -->
+
+
+
+
+<div class="list-group">
+                        <!--a etiketlerinin alt alta olmasi için : CLASS ismi verdik  -->
+
+                        {% for category in categories  %} 
+                      <a class="list-group-item list-group-item-action" href=""> {{ category.name}}  </a>
+
+
+                      {% endfor %}
+                </div>

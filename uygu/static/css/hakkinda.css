@@ -1,0 +1,39 @@
+
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Arka plan rengi */
+    color: #333; /* Metin rengi */
+}
+
+.container {
+    margin-top: 50px; /* Container'ı yukarıdan biraz aşağı kaydır */
+}
+
+h1 {
+    text-align: center; /* Başlık metnini ortala */
+}
+
+p {
+    margin-bottom: 20px; /* Paragraflar arasında boşluk bırak */
+}
+
+h2 {
+    text-align: center; /* Alt başlığı ortala */
+}
+
+/* Ekip üyeleri kutuları */
+.col-md-4 {
+    width: 100%;
+    max-width: 200px; /* Kutuların maksimum genişliği */
+    margin: 0 auto; /* Kutuları yatayda ortala */
+    margin-bottom: 30px; /* Kutular arasında boşluk bırak */
+    text-align: center; /* İçerikleri ortala */
+}
+
+.col-md-4 img {
+    width: 100%; /* Resimleri tam genişlikte göster */
+    height: auto; /* Oranları koruyarak yükseklik ayarla */
+    margin-bottom: 10px; /* Resimlerin altında biraz boşluk bırak */
+}

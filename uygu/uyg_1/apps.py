@@ -1,0 +1,8 @@
+from django.apps import AppConfig
+
+
+
+class Uyg1Config(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'uyg_1'
+

@@ -1,0 +1,160 @@
+{% load static %}
+{% include 'partials/_navbar.html' %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hakkında / İletişim {% endblock %}</title>
+ 
+    {% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    {% endblock %}
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa; /* Arka plan rengi */
+            color: #333; /* Metin rengi */
+        }
+        
+        .container {
+            margin-top: 50px; /* Container'ı yukarıdan biraz aşağı kaydır */
+        }
+        
+        h1, h2 {
+            text-align: center; /* Başlık ve alt başlıkları ortala */
+        }
+        
+        p {
+            margin-bottom: 20px; /* Paragraflar arasında boşluk bırak */
+        }
+        
+        .col-md-4 {
+            width: 100%;
+            max-width: 200px; /* Kutuların maksimum genişliği */
+            margin: 0 auto; /* Kutuları yatayda ortala */
+            margin-bottom: 30px; /* Kutular arasında boşluk bırak */
+            text-align: center; /* İçerikleri ortala */
+        }
+        
+        .col-md-4 img {
+            width: 100%; /* Resimleri tam genişlikte göster */
+            height: auto; /* Oranları koruyarak yükseklik ayarla */
+            margin-bottom: 10px; /* Resimlerin altında biraz boşluk bırak */
+        }
+        
+        .foot {
+            position: fixed;
+            bottom: 20px; /* Y koordinatını ayarla */
+            left: 0; /* X koordinatını ayarla */
+            width: 100%;
+            background-color: #f8f9fa; /* Footer arka plan rengi */
+            padding: 20px 0; /* Footer içeriklerinin yatay boşlukları */
+            text-align: center; /* Footer içeriklerini ortala */
+        }
+        
+        .feedback-section {
+            margin-top: 60px; /* Görüş ve öneriler bölümü için üst boşluk */
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+<div class="container">
+    <h1>Hakkında Sayfası</h1>
+    <p>
+        Şirketimiz, Türkiye'nin önde gelen platformlarından biridir. 2010 yılında kurulan , geniş ürün yelpazesi ve kullanıcı dostu alışveriş deneyimi ile milyonlarca kullanıcıya hizmet vermektedir.
+    </p>
+    <p>
+        Müşteri memnuniyetini en üst düzeye çıkarmak ve kullanıcılarımıza en iyi alışveriş deneyimini sunmak için sürekli çalışıyoruz. Misyonumuz, herkesin hayatını daha kolay ve keyifli hale getirmek için yenilikçi çözümler sunmaktır.
+    </p>
+    <p>
+        Siz değerli müşterilerimizin desteğiyle, olarak büyümeye ve gelişmeye devam ediyoruz. Teşekkür ederiz.
+    </p>
+    
+    <h2>Ekibimiz</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'img/ekip_uye_1.png' %}" alt="Ekip Üyesi 1">
+            <p>Ekip Üyesi 1</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'img/ekip_uye_2.png' %}" alt="Ekip Üyesi 2">
+            <p>Ekip Üyesi 2</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'img/ekip_uye_3.png' %}" alt="Ekip Üyesi 3">
+            <p>Ekip Üyesi 3</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'img/ekip_uye_4.png' %}" alt="Ekip Üyesi 4">
+            <p>Ekip Üyesi 4</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'img/ekip_uye_5.png' %}" alt="Ekip Üyesi 5">
+            <p>Ekip Üyesi 5</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'img/ekip_uye_6.png' %}" alt="Ekip Üyesi 6">
+            <p>Ekip Üyesi 6</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 class="text-center mt-5">İletişim</h1>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h2>Bize Ulaşın</h2>
+            <p><strong>E-posta:</strong> info@example.com</p>
+            <p><strong>Telefon:</strong> +90 123 456 7890</p>
+            <hr>
+            <h2>Adres</h2>
+            <p>Örnek Mahallesi, Örnek Sokak No: 123</p>
+            <p>İstanbul, Türkiye</p>
+        </div>
+        <div class="col-md-6">
+            <h2>İletişim Formu</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Adınız</label>
+                    <input type="text" class="form-control" id="name" placeholder="Adınızı girin">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz</label>
+                    <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı buraya yazın"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <h2>Harita</h2>
+            <img src="{% static 'img/map.png' %}" alt="Harita" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class="container feedback-section">
+    <h2> Görüş ve Öneriler </h2>
+
+</div>
+
+</body>
+</html>
+
+{% include 'partials/footer.html' %}
+
